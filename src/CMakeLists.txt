@@ -1,0 +1,7 @@
+find_package(Boost REQUIRED COMPONENTS unit_test_framework)
+include_directories("${PROJECT_SOURCE_DIR}/include")
+set(TEST_SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+set(TEST_LIBS Header)
+add_executable(src ${TEST_SOURCES})
+target_link_libraries(src${TEST_LIBS} ${Boost_LIBRARIES})
+add_test(Quick_start_test src COMMAND test_main)

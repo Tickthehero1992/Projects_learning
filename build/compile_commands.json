@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/artem/Documents/Projects/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/artem/Documents/Projects/include  -g   -o CMakeFiles/Tutor.dir/Main/main.cpp.o -c /home/artem/Documents/Projects/Main/main.cpp",
+  "file": "/home/artem/Documents/Projects/Main/main.cpp"
+}
+]

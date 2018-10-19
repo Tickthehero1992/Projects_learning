@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/header.hpp
+
+/home/artem/Documents/Projects/Main/main.cpp
+iostream
+-
+header.hpp
+/home/artem/Documents/Projects/Main/header.hpp
+

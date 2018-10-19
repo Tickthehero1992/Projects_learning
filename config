@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	sharedrepository = 2
+[receive]
+	denyNonFastforwards = true
+[remote "Projects_learning"]
+	url = https://github.com/Tickthehero1992/Projects_learning.git
+	fetch = +refs/heads/*:refs/remotes/Projects_learning/*

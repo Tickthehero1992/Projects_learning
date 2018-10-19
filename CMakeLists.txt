@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10.2)
+project(Tutor)
+include_directories(${PROJECT_SOURCE_DIR}/include)
+set (SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
+add_executable(Tutor Main/main.cpp)
