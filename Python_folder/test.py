@@ -17,12 +17,12 @@ datagen = keras.preprocessing.image.ImageDataGenerator(
       fill_mode='nearest')
 
 
-local_zip = '/tmp/cats_and_dogs_filtered.zip'
+local_zip = '/home/artem/Downloads/cats_and_dogs_filtered.zip'
 zip_ref = zipfile.ZipFile(local_zip, 'r')
 zip_ref.extractall('/tmp')
 zip_ref.close()
   
-base_dir = '/tmp/cats_and_dogs_filtered'
+base_dir = '/home/artem/Downloads/cats_and_dogs_filtered'
 train_dir = os.path.join(base_dir, 'train')
 validation_dir = os.path.join(base_dir, 'validation')
 
@@ -125,7 +125,7 @@ model.compile(loss='binary_crossentropy',
 history = model.fit_generator(
     train_generator,
     steps_per_epoch = 100,
-    epochs = 30,
+    epochs = 5,
     verbose =2,
     validation_data=validation_generator,
     validation_steps = 50,
@@ -156,6 +156,8 @@ plt.figure()
 plt.plot(epochs, loss)
 plt.plot(epochs, val_loss)
 plt.title('Training and validation loss')
+keras.models.save_model (model, '/home/artem/Documents/Projects/', overwrite=True, include_optimizer=True)
+
 
 import os, signal
 os.kill(os.getpid(), signal.SIGKILL)
